@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Eye, Smartphone, QrCode, Lock, Heart, Clock, Shield } from 'lucide-react';
+import { Eye, Smartphone, QrCode, Lock, Heart, Clock, Shield, Wifi, Cloud, MonitorCheck } from 'lucide-react';
 
 const projects = [
   {
@@ -31,6 +31,21 @@ const projects = [
       { icon: Shield, label: 'Personal certificado' },
     ],
     tags: ['React', 'WhatsApp API', 'SEO', 'Landing Page'],
+  },
+  {
+    id: 'daz',
+    logo: 'DAZ',
+    name: 'DAZ Solutions Corp',
+    domain: 'daz-solutions.com',
+    href: 'https://daz-solutions.com',
+    description:
+      'Soluciones tecnológicas integrales en Panamá: infraestructura, cloud, videovigilancia, conectividad y desarrollo. 10+ años, 100+ proyectos exitosos.',
+    pills: [
+      { icon: Cloud, label: 'Infraestructura & Cloud' },
+      { icon: Wifi, label: 'Conectividad' },
+      { icon: MonitorCheck, label: 'Soporte Proactivo' },
+    ],
+    tags: ['React', 'Microsoft Azure', 'Cisco', 'Fortinet', 'VMware', 'Ubiquiti'],
   },
 ];
 

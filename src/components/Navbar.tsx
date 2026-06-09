@@ -30,11 +30,11 @@ export default function Navbar() {
         <a href="#" className="flex items-center gap-2 group">
           <img
             src={logotech}
-            alt="TechCore logo"
+            alt="GPTech Core logo"
             className="w-8 h-8 rounded-lg object-cover"
           />
           <span className="text-lg font-semibold tracking-tight text-surface-900">
-            Tech<span className="text-brand-600">Core</span>
+            GPTech <span className="text-brand-600">Core</span>
           </span>
         </a>
 
@@ -53,7 +53,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://wa.me/51908576452?text=Hola%20TechCore%2C%20me%20interesa%20cotizar%20un%20proyecto%20de%20desarrollo%20de%20software.%20%C2%BFPodemos%20conversar%3F"
+            href="https://wa.me/51908576452?text=Hola%20GPTech%20Core%2C%20me%20interesa%20cotizar%20un%20proyecto%20de%20desarrollo%20de%20software.%20%C2%BFPodemos%20conversar%3F"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-accent-500 text-white text-sm font-semibold hover:bg-accent-600 transition-colors duration-300 shadow-sm"
@@ -85,7 +85,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://wa.me/51908576452?text=Hola%20TechCore%2C%20me%20interesa%20cotizar%20un%20proyecto%20de%20desarrollo%20de%20software.%20%C2%BFPodemos%20conversar%3F"
+              href="https://wa.me/51908576452?text=Hola%20GPTech%20Core%2C%20me%20interesa%20cotizar%20un%20proyecto%20de%20desarrollo%20de%20software.%20%C2%BFPodemos%20conversar%3F"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-accent-500 text-white text-sm font-semibold hover:bg-accent-600 transition-colors duration-300"

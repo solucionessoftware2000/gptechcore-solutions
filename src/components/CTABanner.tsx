@@ -1,7 +1,7 @@
 import { MessageCircle, ArrowRight, Phone } from 'lucide-react';
 
 const WHATSAPP_URL =
-  'https://wa.me/51908576452?text=Hola%20TechCore%2C%20quiero%20digitalizar%20mi%20empresa.%20%C2%BFPodemos%20conversar%20sobre%20un%20proyecto%3F';
+  'https://wa.me/51908576452?text=Hola%20GPTech%20Core%2C%20quiero%20digitalizar%20mi%20empresa.%20%C2%BFPodemos%20conversar%20sobre%20un%20proyecto%3F';
 
 export default function CTABanner() {
   return (

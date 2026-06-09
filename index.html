@@ -4,30 +4,51 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/logotech.png" />
     <link rel="apple-touch-icon" href="/logotech.png" />
+    <script>
+      (function () {
+        var img = new Image();
+        img.onload = function () {
+          var s = 64, r = 13;
+          var c = document.createElement('canvas');
+          c.width = c.height = s;
+          var x = c.getContext('2d');
+          x.beginPath();
+          x.moveTo(r, 0); x.lineTo(s - r, 0); x.arcTo(s, 0, s, r, r);
+          x.lineTo(s, s - r); x.arcTo(s, s, s - r, s, r);
+          x.lineTo(r, s); x.arcTo(0, s, 0, s - r, r);
+          x.lineTo(0, r); x.arcTo(0, 0, r, 0, r);
+          x.closePath(); x.clip();
+          x.drawImage(img, 0, 0, s, s);
+          var l = document.querySelector("link[rel='icon']");
+          if (l) { l.type = 'image/png'; l.href = c.toDataURL(); }
+        };
+        img.src = document.querySelector("link[rel='icon']").href;
+      })();
+    </script>
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#1e4ff2" />
-    <title>TechCore Solutions | Desarrollo de Software y Páginas Web en Lima, Perú</title>
-    <meta name="description" content="TechCore Solutions: empresa de desarrollo de software a medida en Lima, Perú. Creamos páginas web, apps móviles, sistemas empresariales e integraciones con IA. Resultados en 4–8 semanas." />
-    <meta name="keywords" content="TechCore, TechCore Solutions, desarrollo de software Perú, desarrollo de software Lima, crear página web Perú, agencia de software Lima, software a medida Lima, desarrollo web Lima, aplicaciones web Perú, sistema empresarial Perú, automatización empresarial, páginas web profesionales Lima, empresa de software Perú" />
-    <meta name="author" content="TechCore Solutions" />
+    <title>GPTech Core | Desarrollo de Software y Páginas Web en Lima, Perú</title>
+    <meta name="description" content="GPTech Core: empresa de desarrollo de software a medida en Lima, Perú. Creamos páginas web, apps móviles, sistemas empresariales e integraciones con IA. Resultados en 4–8 semanas." />
+    <meta name="keywords" content="GPTech Core, GPTech Core, desarrollo de software Perú, desarrollo de software Lima, crear página web Perú, agencia de software Lima, software a medida Lima, desarrollo web Lima, aplicaciones web Perú, sistema empresarial Perú, automatización empresarial, páginas web profesionales Lima, empresa de software Perú" />
+    <meta name="author" content="GPTech Core" />
     <meta name="robots" content="index, follow" />
     <meta name="geo.region" content="PE-LIM" />
     <meta name="geo.placename" content="Lima, Perú" />
     <meta name="geo.position" content="-12.0464;-77.0428" />
     <meta name="ICBM" content="-12.0464, -77.0428" />
     <link rel="canonical" href="https://techcore.solutions/" />
-    <meta property="og:title" content="TechCore Solutions | Desarrollo de Software y Páginas Web en Lima, Perú" />
+    <meta property="og:title" content="GPTech Core | Desarrollo de Software y Páginas Web en Lima, Perú" />
     <meta property="og:description" content="Creamos el software exacto que tu empresa necesita. Páginas web, apps móviles, automatización con IA y sistemas a medida. Basados en Lima, Perú." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://techcore.solutions/" />
     <meta property="og:image" content="https://techcore.solutions/logotech.png" />
     <meta property="og:locale" content="es_PE" />
-    <meta property="og:site_name" content="TechCore Solutions" />
+    <meta property="og:site_name" content="GPTech Core" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@techcoresolutions" />
     <meta name="twitter:image" content="https://techcore.solutions/logotech.png" />
-    <meta name="twitter:title" content="TechCore Solutions | Desarrollo de Software en Lima, Perú" />
+    <meta name="twitter:title" content="GPTech Core | Desarrollo de Software en Lima, Perú" />
     <meta name="twitter:description" content="Páginas web, apps y software a medida para empresas en Perú. Entrega en 4–8 semanas." />
     <script type="application/ld+json">
     [
@@ -35,7 +56,7 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "@id": "https://techcore.solutions/#organization",
-        "name": "TechCore Solutions",
+        "name": "GPTech Core",
         "url": "https://techcore.solutions/",
         "logo": "https://techcore.solutions/logotech.png",
         "description": "Empresa de desarrollo de software a medida en Lima, Perú. Creamos páginas web, aplicaciones móviles, sistemas empresariales y soluciones con inteligencia artificial.",
@@ -54,7 +75,7 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "@id": "https://techcore.solutions/#localbusiness",
-        "name": "TechCore Solutions",
+        "name": "GPTech Core",
         "image": "https://techcore.solutions/logotech.png",
         "url": "https://techcore.solutions/",
         "telephone": "+51908576452",
@@ -78,7 +99,7 @@
         "@type": "WebSite",
         "@id": "https://techcore.solutions/#website",
         "url": "https://techcore.solutions/",
-        "name": "TechCore Solutions",
+        "name": "GPTech Core",
         "description": "Desarrollo de software a medida en Lima, Perú",
         "inLanguage": "es-PE",
         "publisher": { "@id": "https://techcore.solutions/#organization" }
@@ -86,7 +107,7 @@
       {
         "@context": "https://schema.org",
         "@type": "ItemList",
-        "name": "Servicios de TechCore Solutions",
+        "name": "Servicios de GPTech Core",
         "itemListElement": [
           {
             "@type": "Service",

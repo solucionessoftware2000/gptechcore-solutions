@@ -16,9 +16,9 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-8">
           {/* Brand */}
           <div className="flex items-center gap-2">
-            <img src={logotech} alt="TechCore logo" className="w-7 h-7 rounded-md object-cover" />
+            <img src={logotech} alt="GPTech Core logo" className="w-7 h-7 rounded-md object-cover" />
             <span className="text-base font-semibold text-surface-900">
-              Tech<span className="text-brand-600">Core</span> Solutions
+              GPTech <span className="text-brand-600">Core</span>
             </span>
           </div>
 
@@ -40,7 +40,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-xs text-surface-400">
-            &copy; {new Date().getFullYear()} TechCore Solutions. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} GPTech Core. Todos los derechos reservados.
           </p>
         </div>
       </div>
