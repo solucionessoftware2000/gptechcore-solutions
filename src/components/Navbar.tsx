@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Hexagon } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { label: 'Servicios', href: '#servicios' },
@@ -27,11 +27,10 @@ export default function Navbar() {
     >
       <div className="container-landing flex items-center justify-between h-16">
         <a href="#" className="flex items-center gap-2 group">
-          <Hexagon
-            className={`w-7 h-7 transition-colors duration-300 ${
-              scrolled ? 'text-brand-600' : 'text-brand-500'
-            } group-hover:text-brand-700`}
-            strokeWidth={2.2}
+          <img
+            src="/logotech.png"
+            alt="TechCore logo"
+            className="w-8 h-8 rounded-lg object-cover"
           />
           <span className="text-lg font-semibold tracking-tight text-surface-900">
             Tech<span className="text-brand-600">Core</span>
