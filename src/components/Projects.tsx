@@ -1,4 +1,4 @@
-import { ExternalLink, Eye, Lock, Mail, Smartphone, QrCode } from 'lucide-react';
+import { ExternalLink, Eye, Lock, Smartphone, QrCode } from 'lucide-react';
 
 const projects = [
   {
@@ -18,6 +18,7 @@ const projects = [
       { href: 'https://itapp.llc', label: 'Ver sitio', icon: Eye, variant: 'ghost' as const },
       { href: 'https://itapp.llc/login', label: 'Login', icon: ExternalLink, variant: 'brand' as const },
     ],
+    previewUrl: 'https://itapp.llc',
     preview: <ItappPreview />,
   },
 ];
@@ -54,7 +55,7 @@ export default function Projects() {
                   <div className="flex-1 mx-2">
                     <div className="bg-white rounded px-2 py-0.5 text-[10px] text-surface-400 border border-surface-200 max-w-[120px] mx-auto flex items-center gap-1">
                       <Lock className="w-2.5 h-2.5 text-green-500 shrink-0" />
-                      {project.domain}/login
+                      {project.domain}
                     </div>
                   </div>
                 </div>
@@ -131,47 +132,20 @@ export default function Projects() {
 
 function ItappPreview() {
   return (
-    <div className="flex h-full scale-[0.72] origin-top-left w-[139%]">
-      {/* Left branding */}
-      <div className="w-2/5 bg-gradient-to-br from-brand-600 to-brand-800 p-4 flex flex-col justify-between text-white shrink-0">
-        <div>
-          <div className="flex items-center gap-1.5 mb-3">
-            <div className="w-6 h-6 rounded bg-white/15 flex items-center justify-center border border-white/20">
-              <span className="text-white font-bold text-[9px]">IT</span>
-            </div>
-            <span className="text-sm font-bold">ITAPP</span>
-          </div>
-          <p className="text-[10px] text-brand-200 leading-snug">
-            Perfiles digitales y tarjetas NFC para profesionales.
-          </p>
-        </div>
-        <div className="flex items-center gap-1.5 mt-3">
-          <div className="flex -space-x-1">
-            <div className="w-4 h-4 rounded-full bg-brand-400 border border-brand-600" />
-            <div className="w-4 h-4 rounded-full bg-brand-300 border border-brand-600" />
-            <div className="w-4 h-4 rounded-full bg-brand-500 border border-brand-600" />
-          </div>
-          <p className="text-[9px] text-brand-200">+2,500 conectados</p>
-        </div>
-      </div>
-      {/* Right login form */}
-      <div className="flex-1 bg-white p-4 flex flex-col justify-center">
-        <p className="text-xs font-bold text-surface-900 mb-0.5">Iniciar sesión</p>
-        <p className="text-[9px] text-surface-400 mb-3">Accede a tu perfil ITAPP</p>
-        <div className="space-y-2">
-          <div className="flex items-center gap-1.5 px-2 py-1.5 rounded border border-surface-200 bg-surface-50">
-            <Mail className="w-3 h-3 text-surface-400 shrink-0" />
-            <span className="text-[9px] text-surface-400">tu@correo.com</span>
-          </div>
-          <div className="flex items-center gap-1.5 px-2 py-1.5 rounded border border-surface-200 bg-surface-50">
-            <Lock className="w-3 h-3 text-surface-400 shrink-0" />
-            <span className="text-[9px] text-surface-400">••••••••</span>
-          </div>
-          <div className="w-full py-1.5 rounded bg-brand-600 text-white text-[9px] font-semibold text-center">
-            Iniciar sesión
-          </div>
-        </div>
-      </div>
+    <div className="relative overflow-hidden w-full" style={{ height: '148px' }}>
+      <iframe
+        src="https://itapp.llc"
+        title="itapp.llc preview"
+        scrolling="no"
+        style={{
+          width: '1280px',
+          height: '720px',
+          transform: 'scale(0.265)',
+          transformOrigin: 'top left',
+          pointerEvents: 'none',
+          border: 'none',
+        }}
+      />
     </div>
   );
 }
