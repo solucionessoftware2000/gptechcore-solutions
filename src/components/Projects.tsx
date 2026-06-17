@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Eye, Smartphone, QrCode, Lock, Heart, Clock, Shield, Wifi, Cloud, MonitorCheck } from 'lucide-react';
+import { Eye, Smartphone, QrCode, Lock, Heart, Clock, Shield, Wifi, Cloud, MonitorCheck, Scale, Brain, FileText } from 'lucide-react';
 
 const projects = [
   {
@@ -31,6 +31,21 @@ const projects = [
       { icon: Shield, label: 'Personal certificado' },
     ],
     tags: ['React', 'WhatsApp API', 'SEO', 'Landing Page'],
+  },
+  {
+    id: 'icp',
+    logo: 'ICP',
+    name: 'ICP Pericias Forenses',
+    domain: 'periforense.vercel.app',
+    href: 'https://periforense.vercel.app',
+    description:
+      'Plataforma de consultoría pericial psicológica para abogados litigantes en Perú. Pericias penales y civiles, contrapericias e informes con validez judicial.',
+    pills: [
+      { icon: Scale, label: 'Pericias Judiciales' },
+      { icon: Brain, label: 'Psicología Forense' },
+      { icon: FileText, label: 'Informes Periciales' },
+    ],
+    tags: ['React', 'NestJS', 'Prisma', 'PostgreSQL', 'Izipay', 'Email Transaccional'],
   },
   {
     id: 'daz',
