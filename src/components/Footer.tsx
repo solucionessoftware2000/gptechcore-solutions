@@ -2,8 +2,8 @@
 import logotech from '/logotech.png';
 
 const footerLinks = [
-  { label: 'Política de Privacidad', href: '#' },
-  { label: 'Términos de Servicio', href: '#' },
+  { label: 'Política de Privacidad', href: `${import.meta.env.BASE_URL}politica-de-privacidad` },
+  { label: 'Términos de Servicio', href: `${import.meta.env.BASE_URL}terminos-de-servicio` },
   { label: 'Servicios', href: '#servicios' },
   { label: 'Proyectos', href: '#proyectos' },
   { label: 'Contacto', href: '#contacto' },
