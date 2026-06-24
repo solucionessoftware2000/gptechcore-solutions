@@ -1,4 +1,5 @@
 import { MessageCircle, ArrowRight, Phone } from 'lucide-react';
+import Reveal from './Reveal';
 
 const WHATSAPP_URL =
   'https://wa.me/51908576452?text=Hola%20GPTech%20Core%2C%20quiero%20digitalizar%20mi%20empresa.%20%C2%BFPodemos%20conversar%20sobre%20un%20proyecto%3F';
@@ -7,7 +8,7 @@ export default function CTABanner() {
   return (
     <section id="contacto" className="section-padding relative bg-white">
       <div className="container-landing">
-        <div className="relative rounded-2xl overflow-hidden border border-surface-200">
+        <Reveal className="relative rounded-2xl overflow-hidden border border-surface-200">
           {/* Background image with overlay */}
           <img
             src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200"
@@ -49,7 +50,7 @@ export default function CTABanner() {
               </a>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

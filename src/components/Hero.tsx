@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { ArrowRight, ChevronDown, CheckCircle2 } from 'lucide-react';
 
 const highlights = [
@@ -6,7 +7,23 @@ const highlights = [
   'Soporte dedicado post-lanzamiento',
 ];
 
+function useMounted() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(frame);
+  }, []);
+  return mounted;
+}
+
 export default function Hero() {
+  const mounted = useMounted();
+  const enter = () =>
+    `transition-[opacity,transform] duration-700 ease-out-expo motion-reduce:transition-none ${
+      mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+    }`;
+  const enterStyle = (delay: number) => ({ transitionDelay: mounted ? `${delay}ms` : '0ms' });
+
   return (
     <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
       {/* Subtle background gradient */}
@@ -18,24 +35,33 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Copy */}
           <div className="max-w-xl">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-200 bg-brand-50 text-brand-700 text-xs font-medium mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse" />
+            <div
+              className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-200 bg-brand-50 text-brand-700 text-xs font-medium mb-8 ${enter()}`}
+              style={enterStyle(0)}
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse motion-reduce:animate-none" />
               Desarrollo de software a medida en Perú
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold leading-[1.08] tracking-tight text-surface-900 mb-6">
+            <h1
+              className={`text-4xl sm:text-5xl lg:text-[3.4rem] font-bold leading-[1.08] tracking-tight text-surface-900 mb-6 ${enter()}`}
+              style={enterStyle(80)}
+            >
               Desarrollo de software a medida{' '}
               <span className="text-brand-600">para tu empresa</span>{' '}
               en Perú.
             </h1>
 
-            <p className="text-lg text-surface-500 leading-relaxed mb-8">
+            <p
+              className={`text-lg text-surface-500 leading-relaxed mb-8 ${enter()}`}
+              style={enterStyle(160)}
+            >
               Creamos páginas web, aplicaciones móviles y sistemas empresariales
               exactamente a tu medida. Deja los genéricos: automatiza procesos,
               digitaliza tu negocio y aumenta ventas desde Lima.
             </p>
 
-            <ul className="space-y-3 mb-10">
+            <ul className={`space-y-3 mb-10 ${enter()}`} style={enterStyle(240)}>
               {highlights.map((item) => (
                 <li
                   key={item}
@@ -47,7 +73,7 @@ export default function Hero() {
               ))}
             </ul>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className={`flex flex-col sm:flex-row gap-4 ${enter()}`} style={enterStyle(320)}>
               <a
                 href="https://wa.me/51908576452?text=Hola%20GPTech%20Core%2C%20me%20interesa%20iniciar%20un%20proyecto%20de%20desarrollo%20de%20software.%20%C2%BFPodemos%20conversar%3F"
                 target="_blank"
@@ -67,7 +93,12 @@ export default function Hero() {
           </div>
 
           {/* Right - Hero image */}
-          <div className="relative hidden lg:block">
+          <div
+            className={`relative hidden lg:block transition-[opacity,transform] duration-700 ease-out-expo motion-reduce:transition-none ${
+              mounted ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'
+            }`}
+            style={enterStyle(120)}
+          >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-brand-900/10 border border-surface-200/60">
               <img
                 src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"
@@ -101,7 +132,7 @@ export default function Hero() {
 
       <a
         href="#servicios"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-surface-400 hover:text-brand-600 transition-colors duration-300 animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-surface-400 hover:text-brand-600 transition-colors duration-300 animate-bounce motion-reduce:animate-none"
         aria-label="Ir a servicios"
       >
         <ChevronDown className="w-6 h-6" />

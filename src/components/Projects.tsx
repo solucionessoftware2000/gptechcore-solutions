@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Eye, Smartphone, QrCode, Lock, Heart, Clock, Shield, Wifi, Cloud, MonitorCheck, Scale, Brain, FileText } from 'lucide-react';
+import Reveal from './Reveal';
 
 const projects = [
   {
@@ -83,7 +84,7 @@ export default function Projects() {
   return (
     <section id="proyectos" className="section-padding relative bg-surface-50">
       <div className="container-landing">
-        <div className="text-center mb-16">
+        <Reveal className="text-center mb-16">
           <p className="text-sm font-semibold text-brand-600 tracking-wider uppercase mb-3">
             Proyectos
           </p>
@@ -93,13 +94,13 @@ export default function Projects() {
           <p className="mt-4 text-surface-500 max-w-2xl mx-auto">
             Cada proyecto que entregamos es software funcional que resuelve un problema real de negocio.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
+            <Reveal key={project.id} delay={index * 60} className="h-full">
             <div
-              key={project.id}
-              className="group rounded-2xl border border-surface-200 bg-white overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-900/5 hover:border-brand-200 transition-[transform,box-shadow,border-color] duration-300 ease-out-expo flex flex-col"
+              className="group h-full rounded-2xl border border-surface-200 bg-white overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-900/5 hover:border-brand-200 transition-[transform,box-shadow,border-color] duration-300 ease-out-expo flex flex-col"
             >
               <div className="p-5 flex flex-col flex-1">
                 <div className="flex items-center gap-3 mb-3">
@@ -157,6 +158,7 @@ export default function Projects() {
                 </div>
               </div>
             </div>
+            </Reveal>
           ))}
         </div>
       </div>

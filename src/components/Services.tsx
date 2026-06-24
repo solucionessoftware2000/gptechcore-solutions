@@ -1,4 +1,5 @@
 import { Globe, Brain, Plug, Zap } from 'lucide-react';
+import Reveal from './Reveal';
 
 const services = [
   {
@@ -39,7 +40,7 @@ export default function Services() {
   return (
     <section id="servicios" className="section-padding relative bg-white">
       <div className="container-landing">
-        <div className="text-center mb-16">
+        <Reveal className="text-center mb-16">
           <p className="text-sm font-semibold text-brand-600 tracking-wider uppercase mb-3">
             Servicios
           </p>
@@ -49,38 +50,37 @@ export default function Services() {
           <p className="mt-4 text-surface-500 max-w-2xl mx-auto">
             Desde crear tu página web hasta automatizar procesos internos con IA — cada solución está diseñada para resolver problemas reales de tu negocio.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="group relative rounded-2xl border border-surface-200 bg-surface-50 overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-900/5 hover:border-brand-200 transition-[transform,box-shadow,border-color] duration-300 ease-out-expo"
-            >
-              <div className="h-40 overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 h-40 bg-gradient-to-t from-surface-50 via-surface-50/30 to-transparent pointer-events-none" />
-              </div>
-              <div className="relative p-6 pt-2">
-                <div className="w-10 h-10 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center mb-4 -mt-8 relative z-10 group-hover:bg-brand-100 transition-colors duration-300">
-                  <service.icon
-                    className="w-5 h-5 text-brand-600"
-                    strokeWidth={2}
+          {services.map((service, index) => (
+            <Reveal key={service.title} delay={index * 60}>
+              <div className="group relative rounded-2xl border border-surface-200 bg-surface-50 overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-900/5 hover:border-brand-200 transition-[transform,box-shadow,border-color] duration-300 ease-out-expo">
+                <div className="h-40 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
                   />
+                  <div className="absolute inset-0 h-40 bg-gradient-to-t from-surface-50 via-surface-50/30 to-transparent pointer-events-none" />
                 </div>
-                <h3 className="text-base font-semibold text-surface-900 mb-2 leading-snug">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-surface-500 leading-relaxed">
-                  {service.description}
-                </p>
+                <div className="relative p-6 pt-2">
+                  <div className="w-10 h-10 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center mb-4 -mt-8 relative z-10 group-hover:bg-brand-100 transition-colors duration-300">
+                    <service.icon
+                      className="w-5 h-5 text-brand-600"
+                      strokeWidth={2}
+                    />
+                  </div>
+                  <h3 className="text-base font-semibold text-surface-900 mb-2 leading-snug">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-surface-500 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
