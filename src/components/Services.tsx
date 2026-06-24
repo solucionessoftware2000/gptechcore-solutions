@@ -55,7 +55,7 @@ export default function Services() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="group relative rounded-2xl border border-surface-200 bg-surface-50 overflow-hidden hover:shadow-xl hover:shadow-brand-900/5 hover:border-brand-200 transition-all duration-300"
+              className="group relative rounded-2xl border border-surface-200 bg-surface-50 overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-900/5 hover:border-brand-200 transition-[transform,box-shadow,border-color] duration-300 ease-out-expo"
             >
               <div className="h-40 overflow-hidden">
                 <img

@@ -99,7 +99,7 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group rounded-2xl border border-surface-200 bg-white overflow-hidden hover:shadow-xl hover:shadow-brand-900/5 hover:border-brand-200 transition-all duration-300 flex flex-col"
+              className="group rounded-2xl border border-surface-200 bg-white overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-900/5 hover:border-brand-200 transition-[transform,box-shadow,border-color] duration-300 ease-out-expo flex flex-col"
             >
               <div className="p-5 flex flex-col flex-1">
                 <div className="flex items-center gap-3 mb-3">
@@ -138,14 +138,14 @@ export default function Projects() {
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-brand-600 text-white text-sm font-medium hover:bg-brand-700 transition-colors duration-200"
+                    className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-brand-600 text-white text-sm font-medium hover:bg-brand-700 active:scale-[0.97] transition-[background-color,transform] duration-150 ease-out-expo"
                   >
                     <Eye className="w-4 h-4" />
                     Ver sitio
                   </a>
                   <button
                     onClick={() => toggleLike(project.id)}
-                    className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border text-sm font-medium transition-all duration-200 ${
+                    className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border text-sm font-medium active:scale-[0.94] transition-[background-color,border-color,color,transform] duration-150 ease-out-expo ${
                       liked[project.id]
                         ? 'bg-red-50 border-red-200 text-red-500'
                         : 'bg-surface-50 border-surface-200 text-surface-400 hover:bg-red-50 hover:border-red-200 hover:text-red-400'

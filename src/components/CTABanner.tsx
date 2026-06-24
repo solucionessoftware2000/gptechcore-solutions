@@ -34,7 +34,7 @@ export default function CTABanner() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-accent-500 text-white text-base font-bold hover:bg-accent-600 transition-all duration-300 hover:shadow-xl hover:shadow-accent-500/25 hover:scale-[1.02]"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-accent-500 text-white text-base font-bold hover:bg-accent-600 hover:scale-[1.02] active:scale-[0.97] transition-[background-color,transform,box-shadow] duration-200 ease-out-expo hover:shadow-xl hover:shadow-accent-500/25"
               >
                 <MessageCircle className="w-5 h-5" />
                 Escríbenos por WhatsApp
@@ -42,7 +42,7 @@ export default function CTABanner() {
               </a>
               <a
                 href="tel:+51908576452"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-white/20 text-white/90 font-semibold hover:bg-white/10 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-white/20 text-white/90 font-semibold hover:bg-white/10 active:scale-[0.97] transition-[background-color,transform] duration-200 ease-out-expo"
               >
                 <Phone className="w-4 h-4" />
                 +51 908 576 452
