@@ -36,8 +36,8 @@ const projects = [
     id: 'icp',
     logo: 'ICP',
     name: 'ICP Pericias Forenses',
-    domain: 'periforense.vercel.app',
-    href: 'https://periforense.vercel.app',
+    domain: 'periciasforences.com',
+    href: 'https://periciasforences.com',
     description:
       'Plataforma de consultoría pericial psicológica para abogados litigantes en Perú. Pericias penales y civiles, contrapericias e informes con validez judicial.',
     pills: [
