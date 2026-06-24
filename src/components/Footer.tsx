@@ -11,14 +11,14 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-surface-200 bg-surface-50">
+    <footer className="border-t border-white/[0.06] bg-ink-900">
       <div className="container-landing py-12">
         <div className="flex flex-col items-center gap-8">
           {/* Brand */}
           <div className="flex items-center gap-2">
             <img src={logotech} alt="GPTech Core logo" className="w-7 h-7 rounded-md object-cover" />
-            <span className="text-base font-semibold text-surface-900">
-              GPTech <span className="text-brand-600">Core</span>
+            <span className="text-base font-semibold text-white font-mono">
+              GPTech <span className="text-mint-400">Core</span>
             </span>
           </div>
 
@@ -28,7 +28,7 @@ export default function Footer() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm text-surface-500 hover:text-brand-600 transition-colors duration-300"
+                className="text-xs font-mono uppercase tracking-wider text-ink-100 hover:text-mint-400 transition-colors duration-150 ease-out-binance"
               >
                 {link.label}
               </a>
@@ -36,10 +36,10 @@ export default function Footer() {
           </nav>
 
           {/* Divider */}
-          <div className="w-full max-w-xs h-px bg-surface-200" />
+          <div className="w-full max-w-xs h-px bg-white/10" />
 
           {/* Copyright */}
-          <p className="text-xs text-surface-400">
+          <p className="text-xs font-mono text-white/30">
             &copy; {new Date().getFullYear()} GPTech Core. Todos los derechos reservados.
           </p>
         </div>

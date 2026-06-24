@@ -3,85 +3,121 @@ import Reveal from './Reveal';
 
 const services = [
   {
+    id: 'SVC_01',
     icon: Globe,
     title: 'Plataformas Web & Apps Móviles',
     description:
       'Desarrollo rápido, seguro, responsivo y a medida. Aplicaciones que sus clientes y equipo realmente quieren usar.',
-    image:
-      'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=400',
+    stack: ['React', 'React Native', 'Next.js'],
+    features: ['Core Web Vitals 95+', 'PWA-ready', 'CI/CD automatizado'],
+    span: 'lg:col-span-2 lg:row-span-2',
+    accent: 'mint' as const,
   },
   {
+    id: 'SVC_02',
     icon: Brain,
     title: 'Soluciones con Inteligencia Artificial',
     description:
       'Automatización inteligente para optimizar tiempos operativos. IA que trabaja dentro de sus procesos existentes.',
-    image:
-      'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=400',
+    stack: ['LLMs', 'RAG', 'Automatización'],
+    span: 'lg:col-span-2',
+    accent: 'brand' as const,
   },
   {
+    id: 'SVC_03',
     icon: Plug,
     title: 'Integraciones y APIs',
     description:
-      'Conexión fluida de pasarelas de pago, sistemas de correos transaccionales y arquitecturas internas robustas.',
-    image:
-      'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=400',
+      'Conexión fluida de pasarelas de pago, correos transaccionales y arquitecturas internas robustas.',
+    stack: ['REST', 'Webhooks'],
+    span: 'lg:col-span-1',
+    accent: 'amber' as const,
   },
   {
+    id: 'SVC_04',
     icon: Zap,
     title: 'Power Platform & Automatización',
     description:
-      'Soluciones ágiles con Power Apps y Power Automate para digitalizar procesos internos sin fricción.',
-    image:
-      'https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=400',
+      'Soluciones ágiles con Power Apps y Power Automate para digitalizar procesos sin fricción.',
+    stack: ['Power Apps', 'Power Automate'],
+    span: 'lg:col-span-1',
+    accent: 'brand' as const,
   },
 ];
 
+const accentClasses = {
+  mint: { icon: 'bg-mint-500/15 text-mint-400 border-mint-400/20', glow: 'hover:shadow-mint-500/10' },
+  brand: { icon: 'bg-brand-500/15 text-brand-400 border-brand-400/20', glow: 'hover:shadow-brand-500/10' },
+  amber: { icon: 'bg-amber-500/15 text-amber-400 border-amber-400/20', glow: 'hover:shadow-amber-500/10' },
+};
+
 export default function Services() {
   return (
-    <section id="servicios" className="section-padding relative bg-white">
+    <section id="servicios" className="section-padding relative bg-ink-900">
       <div className="container-landing">
         <Reveal className="text-center mb-16">
-          <p className="text-sm font-semibold text-brand-600 tracking-wider uppercase mb-3">
-            Servicios
+          <p className="text-sm font-semibold text-mint-400 font-mono tracking-widest uppercase mb-3">
+            // Servicios
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-surface-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
             Servicios de desarrollo de software en Lima, Perú
           </h2>
-          <p className="mt-4 text-surface-500 max-w-2xl mx-auto">
+          <p className="mt-4 text-ink-100 max-w-2xl mx-auto">
             Desde crear tu página web hasta automatizar procesos internos con IA — cada solución está diseñada para resolver problemas reales de tu negocio.
           </p>
         </Reveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <Reveal key={service.title} delay={index * 60}>
-              <div className="group relative rounded-2xl border border-surface-200 bg-surface-50 overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-900/5 hover:border-brand-200 transition-[transform,box-shadow,border-color] duration-300 ease-out-expo">
-                <div className="h-40 overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 h-40 bg-gradient-to-t from-surface-50 via-surface-50/30 to-transparent pointer-events-none" />
-                </div>
-                <div className="relative p-6 pt-2">
-                  <div className="w-10 h-10 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center mb-4 -mt-8 relative z-10 group-hover:bg-brand-100 transition-colors duration-300">
-                    <service.icon
-                      className="w-5 h-5 text-brand-600"
-                      strokeWidth={2}
-                    />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-4">
+          {services.map((service, index) => {
+            const accent = accentClasses[service.accent];
+            return (
+              <Reveal key={service.id} delay={index * 60} className={`h-full ${service.span}`}>
+                <div
+                  className={`group h-full flex flex-col rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-6 hover:-translate-y-1 hover:border-white/[0.16] hover:bg-white/[0.04] hover:shadow-2xl ${accent.glow} transition-[transform,box-shadow,border-color,background-color] duration-200 ease-out-binance`}
+                >
+                  <div className="flex items-center justify-between mb-5">
+                    <div
+                      className={`w-12 h-12 rounded-xl border ${accent.icon} flex items-center justify-center group-hover:scale-105 transition-transform duration-200 ease-out-binance`}
+                    >
+                      <service.icon className="w-6 h-6" strokeWidth={2} />
+                    </div>
+                    <span className="text-[10px] font-mono text-white/30 tracking-widest">{service.id}</span>
                   </div>
-                  <h3 className="text-base font-semibold text-surface-900 mb-2 leading-snug">
+
+                  <h3 className="text-base font-semibold text-white mb-2 leading-snug">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-surface-500 leading-relaxed">
+                  <p className="text-sm text-ink-100 leading-relaxed">
                     {service.description}
                   </p>
+
+                  {service.features && (
+                    <div className="mt-6 rounded-xl border border-white/[0.06] bg-black/20 p-4 space-y-2.5">
+                      {service.features.map((feature) => (
+                        <div key={feature} className="flex items-center gap-2.5 font-mono text-xs text-white/60">
+                          <span className="w-1.5 h-1.5 rounded-full bg-mint-400 shadow-[0_0_8px_rgba(0,224,140,0.8)]" />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  <div className="flex-1" />
+
+                  <div className="flex flex-wrap gap-1.5 mt-5">
+                    {service.stack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-0.5 rounded border border-white/10 bg-white/[0.03] text-[10px] font-mono text-white/50 tracking-wide"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -6,26 +6,27 @@ const WHATSAPP_URL =
 
 export default function CTABanner() {
   return (
-    <section id="contacto" className="section-padding relative bg-white">
+    <section id="contacto" className="section-padding relative bg-ink-900">
       <div className="container-landing">
-        <Reveal className="relative rounded-2xl overflow-hidden border border-surface-200">
-          {/* Background image with overlay */}
-          <img
-            src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200"
-            alt="Equipo de trabajo digital"
-            className="absolute inset-0 w-full h-full object-cover"
-            loading="lazy"
+        <Reveal className="relative rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-ink-700 via-brand-950 to-ink-800">
+          {/* Technical dot-grid texture, no stock photography */}
+          <div
+            className="absolute inset-0 opacity-10 pointer-events-none"
+            style={{
+              backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)',
+              backgroundSize: '22px 22px',
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-surface-900/90 via-surface-900/80 to-surface-900/60" />
+          <div className="absolute -top-24 right-0 w-[400px] h-[400px] bg-mint-500/10 rounded-full blur-[100px] pointer-events-none" />
 
           <div className="relative z-10 px-6 py-16 sm:px-12 sm:py-20 text-center">
-            <p className="text-sm font-semibold text-accent-400 tracking-wider uppercase mb-4">
-              Comience hoy
+            <p className="text-sm font-semibold text-mint-400 font-mono tracking-widest uppercase mb-4">
+              // Comience hoy
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-4 leading-tight">
               Menos floro, más resultados.
             </h2>
-            <p className="text-lg text-surface-300 mb-10 max-w-xl mx-auto">
+            <p className="text-lg text-ink-50 mb-10 max-w-xl mx-auto">
               Digitalicemos tu empresa hoy mismo. Conversemos y le mostramos
               cómo transformar sus procesos en semanas, no meses.
             </p>
@@ -35,7 +36,7 @@ export default function CTABanner() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-accent-500 text-white text-base font-bold hover:bg-accent-600 hover:scale-[1.02] active:scale-[0.97] transition-[background-color,transform,box-shadow] duration-200 ease-out-expo hover:shadow-xl hover:shadow-accent-500/25"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-mint-500 text-ink-950 text-base font-bold hover:bg-mint-400 hover:scale-[1.02] active:scale-[0.97] transition-[background-color,transform,box-shadow] duration-150 ease-out-binance shadow-[0_0_28px_-6px_rgba(0,224,140,0.5)]"
               >
                 <MessageCircle className="w-5 h-5" />
                 Escríbenos por WhatsApp
@@ -43,7 +44,7 @@ export default function CTABanner() {
               </a>
               <a
                 href="tel:+51908576452"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-white/20 text-white/90 font-semibold hover:bg-white/10 active:scale-[0.97] transition-[background-color,transform] duration-200 ease-out-expo"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-white/15 text-white/90 font-semibold hover:bg-white/10 active:scale-[0.97] transition-[background-color,transform] duration-150 ease-out-binance"
               >
                 <Phone className="w-4 h-4" />
                 +51 908 576 452
