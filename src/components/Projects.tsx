@@ -1,4 +1,4 @@
-import { ArrowUpRight, Smartphone, QrCode, Lock, Heart, Clock, Shield, Wifi, Cloud, MonitorCheck, Scale, Brain, FileText } from 'lucide-react';
+import { ArrowUpRight, Smartphone, QrCode, Lock, Heart, Clock, Shield, Wifi, Cloud, MonitorCheck, Scale, Brain, FileText, Landmark, Workflow, ClipboardCheck } from 'lucide-react';
 import Reveal from './Reveal';
 
 const projects = [
@@ -66,6 +66,23 @@ const projects = [
     ],
     tags: ['React', 'Microsoft Azure', 'Cisco', 'Fortinet', 'VMware', 'Ubiquiti'],
   },
+  {
+    id: 'mves',
+    index: 'P05',
+    logo: 'MV',
+    name: 'MVES — Trámites Municipales',
+    domain: 'mves.tech',
+    href: 'https://mves.tech',
+    description:
+      'Plataforma de trámites 100% digitales para la Municipalidad de Villa El Salvador: licencias, certificados y pagos con seguimiento de expedientes en tiempo real y resolución con firma electrónica.',
+    pills: [
+      { icon: Landmark, label: 'Gobierno Digital' },
+      { icon: Workflow, label: 'Flujos BPMN' },
+      { icon: ClipboardCheck, label: 'Seguimiento de Expedientes' },
+    ],
+    tags: ['React', 'Java 21', 'Spring Boot', 'Camunda 8', 'PostgreSQL', 'Elasticsearch', 'MinIO', 'Docker', 'Ubuntu VPS'],
+    featured: true,
+  },
 ];
 
 export default function Projects() {
@@ -86,7 +103,7 @@ export default function Projects() {
 
         <div className="grid sm:grid-cols-2 gap-5 max-w-4xl mx-auto">
           {projects.map((project, index) => (
-            <Reveal key={project.id} delay={index * 60} className="h-full">
+            <Reveal key={project.id} delay={index * 60} className={`h-full ${project.featured ? 'sm:col-span-2' : ''}`}>
               <div className="group h-full rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-sm overflow-hidden hover:-translate-y-1 hover:border-white/[0.16] hover:bg-white/[0.04] hover:shadow-2xl hover:shadow-mint-500/5 transition-[transform,box-shadow,border-color,background-color] duration-200 ease-out-binance flex flex-col">
                 <div className="p-5 flex flex-col flex-1">
                   <div className="flex items-center justify-between mb-3">
