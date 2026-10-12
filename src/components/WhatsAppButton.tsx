@@ -1,5 +1,6 @@
-const WA_URL =
-  'https://wa.me/51908576452?text=Hola%20GPTech%20Core%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.%20%C2%BFPodemos%20conversar%3F';
+const WA_URL = `https://wa.me/51908576452?text=${encodeURIComponent(
+  'Hola GPTech Core, quiero cotizar una página web para mi negocio. ¿Podemos conversar?'
+)}`;
 
 export default function WhatsAppButton() {
   return (

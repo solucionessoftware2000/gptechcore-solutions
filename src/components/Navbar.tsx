@@ -5,8 +5,13 @@ import logotech from '/logotech.png';
 const navLinks = [
   { label: 'Servicios', href: '#servicios' },
   { label: 'Proyectos', href: '#proyectos' },
+  { label: 'Preguntas', href: '#preguntas' },
   { label: 'Contacto', href: '#contacto' },
 ];
+
+const WHATSAPP_URL = `https://wa.me/51908576452?text=${encodeURIComponent(
+  'Hola GPTech Core, quiero cotizar una página web o sistema para mi negocio. ¿Podemos conversar?'
+)}`;
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -38,7 +43,7 @@ export default function Navbar() {
           </span>
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-5 lg:gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -49,12 +54,12 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://wa.me/51908576452?text=Hola%20GPTech%20Core%2C%20me%20interesa%20cotizar%20un%20proyecto%20de%20desarrollo%20de%20software.%20%C2%BFPodemos%20conversar%3F"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-mint-500 text-ink-950 text-sm font-semibold hover:bg-mint-400 active:scale-[0.97] transition-[background-color,transform] duration-150 ease-out-binance shadow-[0_0_20px_-4px_rgba(0,224,140,0.5)]"
           >
-            Cotizar Proyecto
+            Cotizar proyecto
           </a>
         </div>
 
@@ -85,13 +90,13 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://wa.me/51908576452?text=Hola%20GPTech%20Core%2C%20me%20interesa%20cotizar%20un%20proyecto%20de%20desarrollo%20de%20software.%20%C2%BFPodemos%20conversar%3F"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
             className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-mint-500 text-ink-950 text-sm font-semibold hover:bg-mint-400 active:scale-[0.97] transition-[background-color,transform] duration-150 ease-out-binance"
           >
-            Cotizar Proyecto
+            Cotizar proyecto
           </a>
         </div>
       </div>

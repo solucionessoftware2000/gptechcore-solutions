@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Projects from './components/Projects';
+import FAQ from './components/FAQ';
 import CTABanner from './components/CTABanner';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
@@ -20,6 +21,7 @@ export default function App() {
       <Hero />
       <Services />
       <Projects />
+      <FAQ />
       <CTABanner />
       <Footer />
       <WhatsAppButton />

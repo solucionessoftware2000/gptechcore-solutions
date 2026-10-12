@@ -1,8 +1,9 @@
 import { MessageCircle, ArrowRight, Phone } from 'lucide-react';
 import Reveal from './Reveal';
 
-const WHATSAPP_URL =
-  'https://wa.me/51908576452?text=Hola%20GPTech%20Core%2C%20quiero%20digitalizar%20mi%20empresa.%20%C2%BFPodemos%20conversar%20sobre%20un%20proyecto%3F';
+const WHATSAPP_URL = `https://wa.me/51908576452?text=${encodeURIComponent(
+  'Hola GPTech Core, quiero cotizar una página web para mi negocio. ¿Podemos conversar?'
+)}`;
 
 export default function CTABanner() {
   return (
@@ -21,14 +22,15 @@ export default function CTABanner() {
 
           <div className="relative z-10 px-6 py-16 sm:px-12 sm:py-20 text-center">
             <p className="text-sm font-semibold text-mint-400 font-mono tracking-widest uppercase mb-4">
-              // Comience hoy
+              // Contacto
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-4 leading-tight">
-              Menos floro, más resultados.
+              Cotiza tu página web por WhatsApp
             </h2>
             <p className="text-lg text-ink-50 mb-10 max-w-xl mx-auto">
-              Digitalicemos tu empresa hoy mismo. Conversemos y le mostramos
-              cómo transformar sus procesos en semanas, no meses.
+              Cuéntanos a qué se dedica tu negocio y qué quieres lograr con tu web.
+              Te respondemos con preguntas concretas y una cotización referencial
+              sin compromiso.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

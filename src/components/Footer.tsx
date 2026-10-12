@@ -6,6 +6,7 @@ const footerLinks = [
   { label: 'Términos de Servicio', href: `${import.meta.env.BASE_URL}terminos-de-servicio` },
   { label: 'Servicios', href: '#servicios' },
   { label: 'Proyectos', href: '#proyectos' },
+  { label: 'Preguntas frecuentes', href: '#preguntas' },
   { label: 'Contacto', href: '#contacto' },
 ];
 
@@ -38,10 +39,23 @@ export default function Footer() {
           {/* Divider */}
           <div className="w-full max-w-xs h-px bg-white/10" />
 
-          {/* Copyright */}
-          <p className="text-xs font-mono text-white/30">
-            &copy; {new Date().getFullYear()} GPTech Core. Todos los derechos reservados.
-          </p>
+          <div className="flex flex-col items-center gap-2 text-center">
+            {/* Location + contact */}
+            <p className="text-xs font-mono text-ink-100">
+              Lima, Perú · WhatsApp{' '}
+              <a
+                href="tel:+51908576452"
+                className="hover:text-mint-400 transition-colors duration-150 ease-out-binance"
+              >
+                +51 908 576 452
+              </a>
+            </p>
+
+            {/* Copyright */}
+            <p className="text-xs font-mono text-white/30">
+              &copy; {new Date().getFullYear()} GPTech Core. Todos los derechos reservados.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

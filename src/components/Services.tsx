@@ -1,45 +1,45 @@
-import { Globe, Brain, Plug, Zap } from 'lucide-react';
+import { Globe, CreditCard, Workflow, Zap } from 'lucide-react';
 import Reveal from './Reveal';
 
 const services = [
   {
     id: 'SVC_01',
     icon: Globe,
-    title: 'Plataformas Web & Apps Móviles',
+    title: 'Páginas web y landing pages',
     description:
-      'Desarrollo rápido, seguro, responsivo y a medida. Aplicaciones que sus clientes y equipo realmente quieren usar.',
-    stack: ['React', 'React Native', 'Next.js'],
-    features: ['Core Web Vitals 95+', 'PWA-ready', 'CI/CD automatizado'],
+      'Preparamos tu web para Google, la hacemos rápida en el celular y conectamos cada botón a tu WhatsApp o a un formulario de contacto.',
+    stack: ['React', 'Next.js', 'SEO'],
+    features: ['Diseño adaptado a celulares', 'SEO técnico para Google', 'Botones directos a WhatsApp'],
     span: 'lg:col-span-2 lg:row-span-2',
     accent: 'mint' as const,
   },
   {
     id: 'SVC_02',
-    icon: Brain,
-    title: 'Soluciones con Inteligencia Artificial',
+    icon: CreditCard,
+    title: 'Plataformas web con pagos en línea',
     description:
-      'Automatización inteligente para optimizar tiempos operativos. IA que trabaja dentro de sus procesos existentes.',
-    stack: ['LLMs', 'RAG', 'Automatización'],
+      'Cobra con Izipay desde tu web, envía correos automáticos a tus clientes y administra usuarios desde un panel propio. ICP Pericias Forenses cobra sus servicios así.',
+    stack: ['Izipay', 'NestJS', 'PostgreSQL'],
     span: 'lg:col-span-2',
     accent: 'brand' as const,
   },
   {
     id: 'SVC_03',
-    icon: Plug,
-    title: 'Integraciones y APIs',
+    icon: Workflow,
+    title: 'Sistemas a medida y apps',
     description:
-      'Conexión fluida de pasarelas de pago, correos transaccionales y arquitecturas internas robustas.',
-    stack: ['REST', 'Webhooks'],
+      'Expedientes, aprobaciones y roles de usuario para digitalizar procesos internos. Con este enfoque construimos MVES.',
+    stack: ['Spring Boot', 'Camunda', 'React Native'],
     span: 'lg:col-span-1',
     accent: 'amber' as const,
   },
   {
     id: 'SVC_04',
     icon: Zap,
-    title: 'Power Platform & Automatización',
+    title: 'Automatización e IA',
     description:
-      'Soluciones ágiles con Power Apps y Power Automate para digitalizar procesos sin fricción.',
-    stack: ['Power Apps', 'Power Automate'],
+      'Conectamos tus herramientas y automatizamos tareas repetitivas con Power Automate, APIs o modelos de IA.',
+    stack: ['Power Automate', 'Power Apps', 'LLMs'],
     span: 'lg:col-span-1',
     accent: 'brand' as const,
   },
@@ -60,10 +60,10 @@ export default function Services() {
             // Servicios
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            Servicios de desarrollo de software en Lima, Perú
+            Desarrollo de páginas web y software en Lima, Perú
           </h2>
           <p className="mt-4 text-ink-100 max-w-2xl mx-auto">
-            Desde crear tu página web hasta automatizar procesos internos con IA — cada solución está diseñada para resolver problemas reales de tu negocio.
+            Empieza con una página web y súmale pagos en línea, integraciones o un sistema interno cuando tu negocio lo necesite.
           </p>
         </Reveal>
 
