@@ -3,6 +3,11 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: "main"
+  # Daily re-check of project links at 06:00 Lima (UTC-5)
+  schedule:
+    - cron: '0 11 * * *'
+  # Manual run, e.g. to show a project again right after its site comes back
+  workflow_dispatch:
 
 
 permissions:
@@ -32,7 +37,10 @@ jobs:
           
       - name: Install dependencies
         run: npm ci
-        
+
+      - name: Check project links
+        run: npm run check:projects
+
       - name: Build
         run: npm run build
         

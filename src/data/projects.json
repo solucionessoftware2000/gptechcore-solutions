@@ -1,0 +1,75 @@
+[
+  {
+    "id": "itapp",
+    "logo": "IT",
+    "name": "Itapp LLC",
+    "domain": "itapp.llc",
+    "href": "https://itapp.llc",
+    "description": "SaaS de perfiles digitales, tarjetas NFC y herramientas para impulsar tu negocio. Presencia profesional en segundos.",
+    "pills": [
+      { "icon": "Smartphone", "label": "Tarjetas NFC" },
+      { "icon": "QrCode", "label": "QR Personalizable" },
+      { "icon": "Lock", "label": "Encriptación E2E" }
+    ],
+    "tags": ["Next.js", "NestJS", "PostgreSQL", "Redis", "Prisma", "Cloudflare", "Zoho", "ZeptoMail", "CRM"]
+  },
+  {
+    "id": "enfermeras24",
+    "logo": "E24",
+    "name": "Enfermeras 24 Horas",
+    "domain": "enfermeras24horas.com",
+    "href": "https://enfermeras24horas.com",
+    "image": "projects/enfermeras24.jpg",
+    "description": "Web para un servicio de enfermería a domicilio en Lima con atención las 24 horas y más de 3,000 pacientes y familias atendidas.",
+    "pills": [
+      { "icon": "Clock", "label": "Disponible 24/7" },
+      { "icon": "Heart", "label": "Cuidado a domicilio" },
+      { "icon": "Shield", "label": "Personal capacitado" }
+    ],
+    "tags": ["React", "WhatsApp API", "SEO", "Landing Page"]
+  },
+  {
+    "id": "icp",
+    "logo": "ICP",
+    "name": "ICP Pericias Forenses",
+    "domain": "periciasforences.com",
+    "href": "https://periciasforences.com",
+    "description": "Plataforma de consultoría pericial psicológica para abogados litigantes en Perú. Pericias penales y civiles, contrapericias e informes con validez judicial.",
+    "pills": [
+      { "icon": "Scale", "label": "Pericias Judiciales" },
+      { "icon": "Brain", "label": "Psicología Forense" },
+      { "icon": "FileText", "label": "Informes Periciales" }
+    ],
+    "tags": ["React", "NestJS", "Prisma", "PostgreSQL", "Izipay", "Email Transaccional"]
+  },
+  {
+    "id": "daz",
+    "logo": "DAZ",
+    "name": "DAZ Solutions Corp",
+    "domain": "daz-solutions.com",
+    "href": "https://daz-solutions.com",
+    "description": "Sitio corporativo para una empresa de soluciones tecnológicas en Panamá: infraestructura, cloud, videovigilancia, conectividad y desarrollo.",
+    "pills": [
+      { "icon": "Cloud", "label": "Infraestructura & Cloud" },
+      { "icon": "Wifi", "label": "Conectividad" },
+      { "icon": "MonitorCheck", "label": "Soporte Proactivo" }
+    ],
+    "tags": ["React", "Microsoft Azure", "Cisco", "Fortinet", "VMware", "Ubiquiti"]
+  },
+  {
+    "id": "mves",
+    "logo": "MV",
+    "name": "MVES: Trámites Municipales",
+    "domain": "mves.tech",
+    "href": "https://mves.tech",
+    "image": "projects/mves.jpg",
+    "description": "Plataforma de trámites 100% digitales para la Municipalidad de Villa El Salvador: licencias, certificados y pagos con seguimiento de expedientes en tiempo real y resolución con firma electrónica.",
+    "pills": [
+      { "icon": "Landmark", "label": "Gobierno Digital" },
+      { "icon": "Workflow", "label": "Flujos BPMN" },
+      { "icon": "ClipboardCheck", "label": "Seguimiento de Expedientes" }
+    ],
+    "tags": ["React", "Java 21", "Spring Boot", "Camunda 8", "PostgreSQL", "Elasticsearch", "MinIO", "Docker", "Ubuntu VPS"],
+    "featured": true
+  }
+]

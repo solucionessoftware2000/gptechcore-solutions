@@ -23,3 +23,6 @@ dist-ssr
 .env
 .claude
 .atl
+
+# Generated in CI by `npm run check:projects`
+src/data/project-status.json

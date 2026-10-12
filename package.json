@@ -8,7 +8,8 @@
     "build": "vite build && node -e \"require('fs').copyFileSync('dist/index.html','dist/404.html')\"",
     "lint": "eslint .",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit -p tsconfig.app.json"
+    "typecheck": "tsc --noEmit -p tsconfig.app.json",
+    "check:projects": "node scripts/check-projects.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
